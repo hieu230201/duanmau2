@@ -63,6 +63,7 @@ public class formNguoiHoc extends JFrame {
         _dtm.setColumnIdentifiers(new String[]{
                 "Mã Người Học", "Họ Và Tên", "Ngày Sinh", "Giới Tính", "Điện Thoại", "Email", "Ghi Chú", "Mã Nhân Viên", "Ngày Đăng Kí"
         });
+        tblNguoiHoc.setDefaultEditor(Object.class, null);
         if(_list.count() % 10 == 0){
             soTrang = _list.count() / 10;
         }else {

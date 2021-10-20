@@ -53,13 +53,14 @@ public class formNhanVien extends JFrame {
         this.setLocationRelativeTo(null);
         _dtm = (DefaultTableModel) tblNhanVien.getModel();
 
+
         _dtm.setColumnIdentifiers(new String[]{
                 "Mã Nhân Viên", "Mật Khẩu", "Họ Tên", "email", "Vai Trò"
         });
         tblNhanVien.setModel(_dtm);
         xoaForm();
         loadtbl();
-
+        tblNhanVien.setDefaultEditor(Object.class, null);
         // mở chương trình và lưu giá trị
         addWindowListener(new WindowAdapter() {
             @Override

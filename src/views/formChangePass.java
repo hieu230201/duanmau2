@@ -59,7 +59,7 @@ public class formChangePass extends JFrame {
                     Random random = new Random();
                     code = random.nextInt(9999);
                     String user = "hieuop130316@gmail.com";
-                    String pass = ""; // nhập pass
+                    String pass = "hieu230201"; // nhập pass
                     String to = txtEmail.getText();
                     String subject = "Mã để đổi mật khẩu";
                     String message = "Đây là mã của bạn " + code;

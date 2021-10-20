@@ -26,7 +26,6 @@ public class formHocVien extends JFrame {
     ServiceHocVien _listHocVien = new ServiceHocVien();
     DefaultTableModel _dtm;
     DefaultTableModel dtm;
-    boolean flag = false;
     int maKH = -1;
     private String user, pass;
     private int role;
@@ -59,11 +58,13 @@ public class formHocVien extends JFrame {
         _dtm.setColumnIdentifiers(new String[]{
                 "Mã Người Học", "Họ Và Tên", "Ngày Sinh", "Giới Tính", "Điện Thoại", "Email"
         });
+
         tblNguoiHoc.setModel(_dtm);
         loadCbcChuyenDe();
         loadtblNguoiHoc();
         loadCbcKhoaHoc();
         loadTblHocVien();
+        tblHocVien.setDefaultEditor(Object.class, null);
         tblNguoiHoc.setDefaultRenderer(Object.class, renderer);
         TableRowSorter<TableModel> rowSorter
                 = new TableRowSorter<>(tblNguoiHoc.getModel());
@@ -279,6 +280,7 @@ public class formHocVien extends JFrame {
             dtm.addRow(new Object[]{
                     stt, a.getId(), a.getMaNH(), a.getHoTen(), a.getDiem()
             });
+            stt++;
         }
     }
 

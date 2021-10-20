@@ -65,6 +65,7 @@ public class formKhoaHoc extends JFrame {
         });
         loadTBL();
         loadcbc();
+        tblKhoaHoc.setDefaultEditor(Object.class, null);
         txtTenChuyenDe.setText(String.valueOf(cbcTenChuyenDe.getSelectedItem()));
         txtNguoiTao.setEnabled(false);
         // mở chương trình và lưu giá trị

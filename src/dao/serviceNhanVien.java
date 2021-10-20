@@ -35,17 +35,14 @@ public class serviceNhanVien {
         if(getIndex(nv.getMaNhanVien()) != -1){
             return "Mã nhân viên này đã tồn tại";
         }
-        int i = pm.executeUpdate();
-        if (i > 0) {
-            System.out.println(i);
+        if (pm.executeUpdate() > 0) {
             _list.add(nv);
             return "Thêm nhân viên thành công";
         }
         return "Thêm không thành công";
-
     }
 
-    //Phương thức đổi pass
+    //Phương thức đổi mật khẩu
     public String updatePassNV(Nhanvien nv, String ma) throws SQLException {
         String sql = "update nhanvien set matkhau = ? WHERE manv = ? and matkhau = ?";
         PreparedStatement pm = con.con().prepareStatement(sql);
@@ -103,12 +100,12 @@ public class serviceNhanVien {
             return "Thêm lại thành công";
         }
         return "Thêm lại thất bại";
-
     }
+
 
     //Xóa nhân viên
     public int deleteNV(String ma) throws SQLException {
-//        String sql = "delete from hocvien where makh in  (select makh from khoahoc where manv = ?) delete from hocvien where manh in  (select manh from nguoihoc where manv = ?) delete from nguoihoc where manv = ?  delete from khoahoc where manv = ? delete from nhanvien where manv = ? ";
+//      String sql = "delete from hocvien where makh in  (select makh from khoahoc where manv = ?) delete from hocvien where manh in  (select manh from nguoihoc where manv = ?) delete from nguoihoc where manv = ?  delete from khoahoc where manv = ? delete from nhanvien where manv = ? ";
         String sql = "update nhanvien set  xoa = 0 WHERE manv = ?";
         PreparedStatement pm = con.con().prepareStatement(sql);
         pm.setString(1, ma);

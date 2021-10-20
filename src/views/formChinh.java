@@ -473,7 +473,7 @@ public class formChinh extends JFrame {
                 if (i == JOptionPane.YES_OPTION) {
 
                     String user = "hieuop130316@gmail.com";
-                    String pass = ""; // nhập pass
+                    String pass = "hieu230201"; // nhập pass
                     String to = "hieuntph15836@fpt.edu.vn";
                     String subject = "Lỗi Chương Trình Dự Án Mẫu";
                     String message = "Admin ơi fix lỗi cho em đi ";

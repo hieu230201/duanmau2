@@ -40,6 +40,7 @@ public class loginForm extends JFrame {
         this.setDefaultCloseOperation(3);
         this.setVisible(true);
         this.setLocationRelativeTo(null);
+        ckcRember.setSelected(true);
         pack();
         if (loginNhanVien.chuyen()[0] == null) {
             txtUser.setText("");
